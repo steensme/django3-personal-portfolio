@@ -1,0 +1,19 @@
+
+1.10.2022
+Removed 'share this post' since I haven't been able to get it to work yet
+
+Below is the code that was removed from 'detail'
+
+<p>
+  <a href="{% url "blog:post_share" blog.id %}">
+    Share this post
+  </a>
+</p>
+
+The code was between
+
+{{ blog.description|safe }}
+
+{% endblock %}
+
+Next maybe try adding comments and work on the sharing post issue later
