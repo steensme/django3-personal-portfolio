@@ -17,3 +17,16 @@ The code was between
 {% endblock %}
 
 Next maybe try adding comments and work on the sharing post issue later
+
+1/21/2022
+Pushing changes to pythonanywhere
+
+# any packages installed with pip?
+pip3 freeze > requirements.txt
+
+# check status
+git status
+
+git add .
+
+git commit -m "[describe change]"

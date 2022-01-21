@@ -1,0 +1,16 @@
+Python Anywhere
+
+# From the Bash Console on Python Anywhere
+
+cd django3-personal-portfolio
+
+# Activate virtual environment
+
+workon portfoliovenv
+
+
+
+
+# Exit environment
+
+deactivate

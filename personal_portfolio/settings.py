@@ -132,3 +132,8 @@ EMAIL_HOST_USER = 'evan.d.steensma@gmail.com'
 EMAIL_HOST_PASSWORD = 'LcbitP-_6JWc?ne'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("Looks like no local file. You must be on production")
