@@ -1,8 +1,15 @@
 {% extends "portfolio/base.html" %}
 
+{% load blog_tags %}
+
 {% block content %}
 
 <h4 class="text-center mb-5">Evan has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h4>
+
+
+{% if tag %}
+  <h2>Posts tagged with "{{ tag.name }}"</h2>
+{% endif %}
 
 {% for blog in blogs %}
   <div class="col-md-10">
@@ -11,6 +18,19 @@
         {{ blog.title }}
       </a>
     </h2>
+
+<!--
+    <p class="tags">
+      Tags:
+      {% for tag in post.tags.all %}
+        <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+          {{ tag.name }}
+        </a>
+        {% if not forloop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+-->
+
     <p class="date">
       Published {{ blog.publish }} by {{ blog.author }}
     </p>

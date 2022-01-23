@@ -18,8 +18,10 @@ The code was between
 
 Next maybe try adding comments and work on the sharing post issue later
 
+*************************************************
 1/21/2022
 Pushing changes to pythonanywhere
+*************************************************
 
 # any packages installed with pip?
 pip3 freeze > requirements.txt
@@ -30,3 +32,39 @@ git status
 git add .
 
 git commit -m "[describe change]"
+
+git status
+
+git push origin
+
+# Go to Bash console on pythonanywhere
+
+# activate virutal environment
+workon portfoliovenv
+
+# move to django3-personal-portfolio
+git pull origin
+
+# for new requirements file
+pip install -r requirements.txt
+
+# Got this error message: ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: '/tmp/build/80754af9/django_1601563330930/work'
+# Note, my requirements.txt file looked much different than the one in the tutorial
+
+python manage.py migrate
+python manage.py collectstatic
+# yes if there are changes
+
+# go to pythonanywhere > web and click on reload
+
+# 1/21/22 Note: the updating still seemed to work. I am not sure why the requirements.txt file turned out that way.
+*********************************************
+
+Next things to do:
+- fill in content for projects I've worked on
+- change password for /admin --make it harder to crack
+- get tags working so that blogs can be sorted by topic
+
+Completed 1/23/22
+- add markdown formatting for blog posts
+- add comments for blog posts

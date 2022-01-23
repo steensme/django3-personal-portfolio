@@ -8,4 +8,6 @@ urlpatterns = [
     path('<int:blog_id>/', views.detail, name='detail'),
     path('<int:blog_id>/share/',
          views.post_share, name='post_share'),
+    path('tag/<slug:tag_slug>/',
+         views.all_blogs, name='post_list_by_tag'),
 ]
